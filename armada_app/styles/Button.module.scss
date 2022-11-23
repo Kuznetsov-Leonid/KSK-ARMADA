@@ -1,0 +1,214 @@
+.Bg_none{
+    margin: 5px;
+}
+
+/*---Buttons settings outline---*/
+.LargeButtonOutline{ 
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: #469597;
+    margin: 5px;
+    border: 2px solid #469597;
+    border-radius: 4px;
+    padding: 10px 40px 12px 40px;
+    gap: 10px;
+    background: none;
+}
+.RegularButtonOutline{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: #469597;
+    margin: 5px;
+    border: 2px solid #469597;
+    border-radius: 4px;
+    padding: 5px 32px 7px 32px;
+    gap: 10px;
+    background: none;
+}
+.SmallButtonOutline{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: #469597;
+    margin: 5px;
+    border: 2px solid #469597;
+    border-radius: 4px;
+    padding: 3px 24px 4px 24px;
+    gap: 10px;
+    background: none;
+}
+
+/*---Buttons settings outline hover---*/
+.LargeButtonOutline:hover{
+    color: #ffffff;
+    background-color: #4BCCCF;
+    border: 2px solid #4BCCCF;
+}
+.RegularButtonOutline:hover{
+    color: #ffffff;
+    background-color: #4BCCCF;
+    border: 2px solid #4BCCCF;
+}
+.SmallButtonOutline:hover{
+    color: #ffffff;
+    background-color: #4BCCCF;
+    border: 2px solid #4BCCCF;
+}
+
+/*---Buttons settings outline focus---*/
+.LargeButtonOutline:focus{
+    color: #ffffff;
+    background-color: #5BA199;
+    border: 2px solid #5BA199;
+}
+.RegularButtonOutline:focus{
+    color: #ffffff;
+    background-color: #5BA199;
+    border: 2px solid #5BA199;
+}
+.SmallButtonOutline:focus{
+    color: #ffffff;
+    background-color: #5BA199;
+    border: 2px solid #5BA199;
+}
+
+/*---Buttons settings outline active---*/
+.LargeButtonOutline:active{
+    color: #ffffff;
+    background-color: #00fbff;
+    border: 2px solid #00fbff;
+}
+.RegularButtonOutline:active{
+    color: #ffffff;
+    background-color: #00fbff;
+    border: 2px solid #00fbff;
+}
+.SmallButtonOutline:active{
+    color: #ffffff;
+    background-color: #00fbff;
+    border: 2px solid #00fbff;
+}
+
+/*---Buttons settings outline disabled---*/
+
+.LargeButtonOutline:disabled{
+    opacity: 0.5;
+    border: 1px solid #469597;
+    border-radius: 4px;
+}
+.RegularButtonOutline:disabled{
+    opacity: 0.5;
+    border: 1px solid #469597;
+    border-radius: 4px;
+}
+.SmallButtonOutline:disabled{
+    opacity: 0.5;
+    border: 1px solid #469597;
+    border-radius: 4px;
+}
+
+/*---Buttons settings solid---*/
+.LargeButtonSolid{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 10px 40px 12px 40px;
+    margin: 5px;
+    color: #ffffff;
+    background-color: #469597;
+    border: 2px solid #469597;
+    border-radius: 4px;
+}
+.RegularButtonSolid{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 5px 32px 7px 32px;
+    margin: 5px;
+    color: #ffffff;
+    background-color: #469597;
+    border: 2px solid #469597;
+    border-radius: 4px;
+}
+.SmallButtonSolid{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 3px 24px 4px 24px;
+    margin: 5px;
+    color: #ffffff;
+    background-color: #469597;
+    border: 2px solid #469597;
+    border-radius: 4px;
+}
+
+/*---Buttons settings solid hover---*/
+
+.LargeButtonSolid:hover{
+    background-color: #4BCCCF;
+    border: 2px solid #4BCCCF;
+}
+.RegularButtonSolid:hover{
+    background-color: #4BCCCF;
+    border: 2px solid #4BCCCF;
+}
+.SmallButtonSolid:hover{
+    background-color: #4BCCCF;
+    border: 2px solid #4BCCCF;
+}
+
+/*---Buttons settings solid focus---*/
+
+.LargeButtonSolid:focus{
+    background-color: #5BA199;
+    border: 2px solid #5BA199;
+}
+.RegularButtonSolid:focus{
+    background-color: #5BA199;
+    border: 2px solid #5BA199;
+}
+.SmallButtonSolid:focus{
+    background-color: #5BA199;
+    border: 2px solid #5BA199;
+}
+
+/*---Buttons settings solid active---*/
+
+.LargeButtonSolid:active{
+    background-color: #5BA199;
+    border: 2px solid #5BA199;
+}
+.RegularButtonSolid:active{
+    background-color: #5BA199;
+    border: 2px solid #5BA199;
+}
+.SmallButtonSolid:active{
+    background-color: #5BA199;
+    border: 2px solid #5BA199;
+}
+
+/*---Buttons settings solid disabled---*/
+
+.LargeButtonSolid:disabled{
+    background: #469597;
+    opacity: 0.5;
+    border-radius: 4px;
+}
+.RegularButtonSolid:disabled{
+    background: #469597;
+    opacity: 0.5;
+    border-radius: 4px;
+}
+.SmallButtonSolid:disabled{
+    background: #469597;
+    opacity: 0.5;
+    border-radius: 4px;
+}

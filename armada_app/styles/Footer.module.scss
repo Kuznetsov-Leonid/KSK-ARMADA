@@ -1,0 +1,137 @@
+@mixin TxtStyle {
+    font-family: 'Roboto';
+    font-style: normal;
+    line-height: 160%;
+    color: #FFFFFF;
+}
+
+.Basic{
+    background-color: #5BA199;
+}
+.Light{
+    background-color: #3C3D46;
+}
+.Dark{
+    background-color: #1C1E22;
+}
+
+.MrAuto{
+    margin: auto;
+}
+
+.bg_none{
+    padding: 15px;
+    background: none;
+    border: none;
+}
+
+.Footer{
+    .Aria1{
+        .Logo{
+            max-width: 196px;
+            max-height: 74px;
+        }
+        .Txt{
+        
+            p{
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 150%;
+                color: #FFFFFF;
+                text-align: justify;
+            }
+        }
+        h1{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 150%;
+            color: #FFFFFF;
+            margin-top: 20px;
+            margin-bottom: 11px;
+            text-transform: uppercase;
+        }
+        .MapSite{
+            display: grid;
+            a{
+                width:fit-content ;
+                text-decoration: none;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 160%;
+                color: #FFFFFF;
+                opacity: 0.6;
+                transition: 0.2s;
+            }
+            a:hover{
+                opacity: 1;
+            }
+        }
+        .MapUsContacts{
+            opacity: 0.6;
+            p{
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 160%;
+                margin: 0px 0px 0px 10px;
+                color: #FFFFFF;
+            }
+            img{
+                position: relative;
+                top: 4px;
+            }
+        }
+    }
+    .Aria2{
+        max-height: 40px;
+        .Copirited{
+            text-align: center;
+            padding: 11px;
+            p{
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 150%;
+                color: #FFFFFF;
+                margin: 0;
+                b{
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 150%;
+                color: #FFFFFF;
+                opacity: 0.6;
+                margin: 0;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 992px){
+    .Aria1{
+        text-align: center;
+        .MapUsContacts{
+            display: grid;
+            justify-content: center;
+            text-align: center;
+
+        }
+        .DisplayNoneOnMobile{
+            display: none;
+        }
+    }
+}
+
+
+
+
+

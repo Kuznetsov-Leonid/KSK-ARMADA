@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
 import Header from '../components/Navbar/header';
+import Footer from '../components/footer/footer';
 
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
         <main className={styles.main}>
           <h1>ksk armada</h1>
         </main>
+        <Footer/>
       </div>
     </>
   )

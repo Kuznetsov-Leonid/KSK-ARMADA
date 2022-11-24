@@ -17,7 +17,7 @@ const Header = () => {
     розовом фоне с скруглёнными углами, 
     справа название компании - Армада, 
     снизу подпись конно-спортивный клуб."
-    `
+    `;
     return (
         <>
             <Navbar collapseOnSelect expand="lg" className={`${Styles.Navbar_Accent}`} variant="dark">

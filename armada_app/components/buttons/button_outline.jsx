@@ -1,4 +1,4 @@
-import Styles from "../styles/Button.module.scss";
+import Styles from "../../styles/Button.module.scss";
 /**
  *  Конструкция для ссылок
  *   <form action="https://getuikit.com/docs/icon" target="_blank">

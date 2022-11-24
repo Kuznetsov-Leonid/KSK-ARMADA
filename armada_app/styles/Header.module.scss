@@ -1,0 +1,71 @@
+@mixin LinkTextStyle {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 160%;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.Navbar_Accent{
+    background-color: #5BA199;
+}
+.Navbar_DeepGray{
+    background-color: #3C3D46;
+}
+
+.Logotype{
+    width: 200px;
+    height: 65px;
+    padding: 0px;
+}
+
+.Nav{
+    @include LinkTextStyle();
+    margin: auto;
+}
+
+.Link{
+    color: #ffffffa1;
+    
+}
+.Link:hover{
+    color: #FFFFFF;
+}
+
+.Active{
+    text-decoration: underline;
+    color: #FFFFFF;
+}
+.Active:hover{
+    color: #FFFFFF;
+}
+
+@media (max-width: 992px){
+    .Nav{
+        font-size: 25px;
+    }
+    .Nav_social{
+        border-top: solid 2px white;
+        margin: auto;
+        text-align: center;
+        margin: 10px;
+        padding-top: 10px;
+    }
+    .Link{
+        color: #FFFFFF;
+    }
+    .Active{
+        color: #FFFFFF;
+    }
+}
+
+@media (max-width: 296px){
+    .Logotype{
+        width: 150px;
+        height: 50px;
+    }
+}

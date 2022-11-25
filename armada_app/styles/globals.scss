@@ -36,3 +36,32 @@ a {
             animation: App-logo-spin infinite 20s linear;
   }
 }
+
+.White{
+  background: rgba(255, 255, 255, 0.6);
+  color: black;
+}
+.Leather{
+  background: rgba(221, 190, 170, 0.6);
+  color: white;
+}
+.Pearl{
+  background: rgba(214, 209, 212, 0.6);
+  color: black;
+}
+.DeepGray{
+  background: rgba(60, 61, 70, 0.6);
+  color: white;
+}
+.Lasur{
+  background: rgba(70, 149, 151, 0.6);
+  color: black;
+}
+.on{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.off{
+  display: none;
+}

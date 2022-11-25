@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
 import Header from '../components/Navbar/header';
 import Footer from '../components/footer/footer';
+import { Container, CardGroup, Card } from 'react-bootstrap';
 
 
 export default function Home() {
@@ -21,7 +22,6 @@ export default function Home() {
         
         <Header/>
         <main className={styles.main}>
-          <h1>ksk armada</h1>
         </main>
         <Footer/>
       </div>

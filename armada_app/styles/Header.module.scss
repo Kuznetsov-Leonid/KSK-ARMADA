@@ -30,7 +30,8 @@
 
 .Link{
     color: #ffffffa1;
-    
+    text-decoration: none;
+    margin: 10px
 }
 .Link:hover{
     color: #FFFFFF;
@@ -39,6 +40,7 @@
 .Active{
     text-decoration: underline;
     color: #FFFFFF;
+    margin: 10px
 }
 .Active:hover{
     color: #FFFFFF;

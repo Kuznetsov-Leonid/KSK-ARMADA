@@ -5,13 +5,17 @@ import Image from 'next/image';
 import Logotype from '../../public/logotypes/Logo-web-leather_white.svg';
 import Styles from '../../styles/Header.module.scss';
 import Social_kit from '../socialKit/social_kit';
-
+import { NavigationAPI } from '../../pages/api/NavigationAPI';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 /**
  * 
  * @returns Хедер навбар
  */
 const Header = () => {
+    const {pathname} = useRouter()
+    
     const AlternativeLogo = `
     "Логотип: тройка лошадей на квадратном, 
     розовом фоне с скруглёнными углами, 
@@ -20,7 +24,7 @@ const Header = () => {
     `;
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" className={`${Styles.Navbar_Accent}`} variant="dark">
+            <Navbar collapseOnSelect expand="lg" className={pathname === '/rent' ? Styles.Navbar_DeepGray : Styles.Navbar_Accent} variant="dark">
                 <Container>
                     <Navbar.Brand href="/">
                         <Image
@@ -31,16 +35,22 @@ const Header = () => {
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className={`me-auto ${Styles.Nav}`}>
-                            <Nav.Link href="#features" className={`${Styles.Active}`}>Главная</Nav.Link>
-                            <Nav.Link href="#features" className={`${Styles.Link}`}>Услуги</Nav.Link>
-                            <Nav.Link href="#features" className={`${Styles.Link}`}>Лушади</Nav.Link>
-                            <Nav.Link href="#features" className={`${Styles.Link}`}>Блог</Nav.Link>
-                            <Nav.Link href="#features" className={`${Styles.Link}`}>Контакты</Nav.Link>
-                            <Nav.Link href="#features" className={`${Styles.Link}`}>Постой</Nav.Link>
+                        <Nav 
+                            className={`me-auto ${Styles.Nav}`} 
+                            style={{'margin':'auto'}}
+                            >
+                            {NavigationAPI.map(({ id, title, path }) => (
+                                <Link
+                                    key       = {id} 
+                                    href      = {path} 
+                                    className = {pathname === path ? Styles.Active : Styles.Link}
+                                >
+                                    {title}
+                                </Link>
+                            ))}
                         </Nav>
                         <Nav className={`${Styles.Nav_social}`}>
-                            <div eventKey={2} href="#memes">
+                            <div>
                                 <Social_kit/>
                             </div>
                         </Nav>

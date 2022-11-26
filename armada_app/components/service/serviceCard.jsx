@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Styles from '../../styles/ServiceCard.module.scss';
 import { Container, CardGroup, Card, Modal, Button } from 'react-bootstrap';
 import Image from 'next/image';
@@ -40,12 +40,32 @@ export const ServiceCard = (props) => {
         const ITEM_DOP_INFO_TITLE       = props.ITEM_DOP_INFO_TITLE;
         const ITEM_DOP_INFO_DISCRIPTION = props.ITEM_DOP_INFO_DISCRIPTION;
 
+        const [title, setTitle]                     = useState('title');
+        const [discription, setDiscription]         = useState('discription');
+        const [price, setPrice]                     = useState('price');
+        const [img, setImg]                         = useState();
+        const [alt, setAlt]                         = useState('alt');
+        const [color, setColor]                     = useState('White');
+        const [btn, setBtn]                         = useState('btn');
+        const [infoTitle, setInfoTitle]             = useState('infoTitle');
+        const [infoDiscription, setInfoDiscription] = useState('infoDiscription');
+
+        useEffect(() => setImg(ITEM_IMG.img), []);
+        useEffect(() => setAlt(ITEM_ALT.alt), []);
+        useEffect(() => setTitle(ITEM_TITLE.title), []);
+        useEffect(() => setDiscription(ITEM_DISCRIPTION.discription), []);
+        useEffect(() => setPrice(ITEM_PRICE.price), []);
+        useEffect(() => setColor(ITEM_BG_COLOR.bgColor), []);
+        useEffect(() => setBtn(ITEM_DOP_INFO_BTN.dopInfoBtn), []);
+        useEffect(() => setInfoTitle(ITEM_DOP_INFO_TITLE.dopInfoTitle_1), []);
+        useEffect(() => setInfoDiscription(ITEM_DOP_INFO_DISCRIPTION.dopInfoDicription_1), []);
+
         return(
             <>
                 <div 
                     className={`
                         ${Styles.ServiceCard} 
-                        ${ITEM_BG_COLOR.bgColor}`
+                        ${color}`
                     }
                     >
                     <CardGroup>
@@ -60,8 +80,8 @@ export const ServiceCard = (props) => {
                                     <div className={`${Styles.ImgZone}`}>
                                         <Image
                                             className = {Styles.IMG}
-                                            src       = {ITEM_IMG.img}
-                                            alt       = {ITEM_ALT.alt}
+                                            src       = {img}
+                                            alt       = {alt}
                                         />
                                     </div>
                                 </Card>
@@ -73,11 +93,11 @@ export const ServiceCard = (props) => {
                                 >
                                     <div className={`${Styles.DescriptionZone}`}>
                                         <h1 className={`${Styles.Right}`}>
-                                            {ITEM_TITLE.title}
+                                            {title}
                                         </h1>
-                                        <p>{ITEM_DISCRIPTION.discription}</p>
-                                        <p><h2>{ITEM_PRICE.price}</h2></p>
-                                        <div className = {ITEM_DOP_INFO_BTN.dopInfoBtn}>
+                                        <p>{discription}</p>
+                                        <p><b>{price}</b></p>
+                                        <div className = {btn}>
                                             <Button onClick   = {() => setModalShow(true)} variant="link">
                                                 Дополнительная информация
                                             </Button>
@@ -94,8 +114,8 @@ export const ServiceCard = (props) => {
                 <ServiceModal
                     show   = {modalShow}
                     onHide = {() => setModalShow(false)}
-                    title  = {ITEM_DOP_INFO_TITLE.dopInfoTitle_1}
-                    body   = {ITEM_DOP_INFO_DISCRIPTION.dopInfoDicription_1}
+                    title  = {infoTitle}
+                    body   = {infoDiscription}
                 />
             </>
         );

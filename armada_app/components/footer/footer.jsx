@@ -24,93 +24,91 @@ const Footer = () => {
     let year = date.getFullYear();
     const {pathname} = useRouter()
     return(
-        <>
-            
-                <div className = {`${Styles.Footer}`}>
-                    <div className={`
-                        ${Styles.Aria1} 
-                        ${pathname === '/rent' ? Styles.Light : Styles.Basic}`
-                        }>
-                        <Container>
-                            <CardGroup>
-                                <Card style={bg_none}>
-                                    <Image
-                                        src = {Logo}
-                                        alt = {AlternativeLogo}
-                                        className = {`
-                                        ${Styles.Logo} 
-                                        ${Styles.MrAuto}`
-                                    }/>
-                                    <div className={Styles.Txt}>
-                                        <p>
-                                            Наш клуб&nbsp;&mdash; лидер обучения. У&nbsp;нас есть множество программ от&nbsp;ведущих тренеров спорта. Мы&nbsp;предлагаем актуальные подходы к&nbsp;обучению и&nbsp;высокое качество обслуживание.
-                                        </p>
-                                    </div>
-                                    <div className = {Styles.MrAuto}>
-                                        <Social_kit />
-                                    </div>
-                                </Card>
-                                <Card 
-                                    style     = {bg_none}
-                                    className = {`${Styles.DisplayNoneOnMobile}`}
+        <footer>
+            <div className = {`${Styles.Footer}`}>
+                <div className={`
+                    ${Styles.Aria1} 
+                    ${pathname === '/rent' ? Styles.Light : Styles.Basic}`
+                    }>
+                    <Container>
+                        <CardGroup>
+                            <Card style={bg_none}>
+                                <Image
+                                    src = {Logo}
+                                    alt = {AlternativeLogo}
+                                    className = {`
+                                    ${Styles.Logo} 
+                                    ${Styles.MrAuto}`
+                                }/>
+                                <div className={Styles.Txt}>
+                                    <p>
+                                        Наш клуб&nbsp;&mdash; лидер обучения. У&nbsp;нас есть множество программ от&nbsp;ведущих тренеров спорта. Мы&nbsp;предлагаем актуальные подходы к&nbsp;обучению и&nbsp;высокое качество обслуживание.
+                                    </p>
+                                </div>
+                                <div className = {Styles.MrAuto}>
+                                    <Social_kit />
+                                </div>
+                            </Card>
+                            <Card 
+                                style     = {bg_none}
+                                className = {`${Styles.DisplayNoneOnMobile}`}
+                            >
+                                <h1>Карта сайта</h1>
+                                <div className={`${Styles.MapSite}`}>
+                                    <a href="http://">Главная</a>
+                                    <a href="http://">Услуги</a>
+                                    <a href="http://">Лошади</a>
+                                    <a href="http://">Блог</a>
+                                    <a href="http://">Контакты</a>
+                                    <a href="http://">Постой</a>
+                                </div>
+                            </Card>
+                            <Card 
+                                style     = {bg_none}
+                                className = {`${Styles.DisplayNoneOnMobile}`}
+                            >
+                                <h1>Услуги</h1>
+                                <div className={`
+                                    ${Styles.MapService} 
+                                    ${Styles.MapSite}`
+                                    }>
+                                    <a href="http://">Конный прокат</a>
+                                    <a href="http://">Обучение верховой езде</a>
+                                    <a href="http://">Фотосессии</a>
+                                    <a href="http://">Экскурсии</a>
+                                    <a href="http://">Аренда денников</a>
+                                </div>
+                            </Card>
+                            <Card 
+                                style={bg_none}
                                 >
-                                    <h1>Карта сайта</h1>
-                                    <div className={`${Styles.MapSite}`}>
-                                        <a href="http://">Главная</a>
-                                        <a href="http://">Услуги</a>
-                                        <a href="http://">Лошади</a>
-                                        <a href="http://">Блог</a>
-                                        <a href="http://">Контакты</a>
-                                        <a href="http://">Постой</a>
+                                <h1>наши контакты</h1>
+                                <div className={`${Styles.MapUsContacts}`}>
+                                    <div style={{'display':'flex'}}>
+                                        <Image src={Phone}/>
+                                        <p>+7(967)017-99-63</p>
                                     </div>
-                                </Card>
-                                <Card 
-                                    style     = {bg_none}
-                                    className = {`${Styles.DisplayNoneOnMobile}`}
-                                >
-                                    <h1>Услуги</h1>
-                                    <div className={`
-                                        ${Styles.MapService} 
-                                        ${Styles.MapSite}`
-                                        }>
-                                        <a href="http://">Конный прокат</a>
-                                        <a href="http://">Обучение верховой езде</a>
-                                        <a href="http://">Фотосессии</a>
-                                        <a href="http://">Экскурсии</a>
-                                        <a href="http://">Аренда денников</a>
+                                    <div style={{'display':'flex'}}>
+                                        <Image src={Mail}/>
+                                        <p>ksk_armada@yahoo.com</p>
                                     </div>
-                                </Card>
-                                <Card 
-                                    style={bg_none}
-                                    >
-                                    <h1>наши контакты</h1>
-                                    <div className={`${Styles.MapUsContacts}`}>
-                                        <div style={{'display':'flex'}}>
-                                            <Image src={Phone}/>
-                                            <p>+7(967)017-99-63</p>
-                                        </div>
-                                        <div style={{'display':'flex'}}>
-                                            <Image src={Mail}/>
-                                            <p>ksk_armada@yahoo.com</p>
-                                        </div>
-                                    </div>
-                                </Card>
-                            </CardGroup>
-                        </Container>
-                    </div>
-                    <div className={`
-                        ${Styles.Aria2} 
-                        ${pathname === '/rent' ? Styles.Dark : Styles.Light}`
-                        }>
-                        <Container>
-                            <div className={`${Styles.Copirited}`}>
-                                <p><b>&copy;&ensp;All rights reserved KSK ARMADA&ensp;</b>{year}</p>
-                            </div>
-                        </Container>
-                    </div>
+                                </div>
+                            </Card>
+                        </CardGroup>
+                    </Container>
                 </div>
-            
-        </>
+                <div className={`
+                    ${Styles.Aria2} 
+                    ${pathname === '/rent' ? Styles.Dark : Styles.Light}`
+                    }>
+                    <Container>
+                        <div className={`${Styles.Copirited}`}>
+                            <p><b>&copy;&ensp;All rights reserved KSK ARMADA&ensp;</b>{year}</p>
+                        </div>
+                    </Container>
+                </div>
+            </div>
+        </footer>
     );
 }
 

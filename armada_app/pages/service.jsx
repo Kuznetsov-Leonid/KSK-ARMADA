@@ -1,10 +1,14 @@
-import styles from '../styles/Home.module.scss';
+import Styles from '../styles/ServicePage.module.scss';
+import TitlePage from '../components/TitlePage';
 
+import { ServiceCard } from '../components/service/serviceCard';
+import { ServiceAPI } from '../pages/api/ServiceAPI';
 const Services = () => {
     return(
         <>
-            <main className={styles.main}>
-                <h1>Услуги</h1>
+            <main className={Styles.main}>
+                <TitlePage>Услуги</TitlePage>
+                <ServiceCard  DATA={ServiceAPI} />
             </main>
         </>
     );

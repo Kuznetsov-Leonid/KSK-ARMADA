@@ -23,7 +23,7 @@ const Header = () => {
     снизу подпись конно-спортивный клуб."
     `;
     return (
-        <>
+        <header>
             <Navbar collapseOnSelect expand="lg" className={pathname === '/rent' ? Styles.Navbar_DeepGray : Styles.Navbar_Accent} variant="dark">
                 <Container>
                     <Navbar.Brand href="/">
@@ -43,7 +43,7 @@ const Header = () => {
                                 <Link
                                     key       = {id} 
                                     href      = {path} 
-                                    className = {pathname === path ? Styles.Active : Styles.Link}
+                                    className = {`${pathname === path ? Styles.Active : Styles.Link}`}
                                 >
                                     {title}
                                 </Link>
@@ -57,7 +57,7 @@ const Header = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-        </>
+        </header>
     )
 }
 

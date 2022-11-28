@@ -1,0 +1,64 @@
+.Invite{
+    background-color: #3C3D46;
+    color: #ffffff;
+    font-family: 'Roboto';
+    font-style: normal;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    .Invite_txt{
+        p{
+            font-weight: 600;
+            font-size: 23px;
+        }
+    }
+    .Invite_contacts{
+        display: flex;
+        flex-direction: row;
+        
+        p{
+            font-weight: 600;
+            font-size: 22px;
+        }
+        img{
+            position: relative;
+            width: 20px;
+            height: 20px;
+            top: 7px;
+            opacity: 0.6;
+        }
+    }
+    .Invite_btn{
+        display: flex;
+    }
+}
+
+@media (min-width: 768px){
+    .Invite{
+        .Invite_contacts{
+            justify-content: right;
+        }
+        .Invite_btn{
+            justify-content: right;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .Invite{
+        .Invite_txt{
+            p{  
+                text-align: justify;
+                font-size: 19px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px){
+    .Invite_contacts{
+        justify-content: center;
+    }
+    .Invite_btn{
+        justify-content: center;
+    }
+}

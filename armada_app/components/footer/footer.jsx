@@ -6,7 +6,7 @@ import Social_kit from '../socialKit/social_kit';
 import Phone from '../../public/ui_Kit/iPhone.svg';
 import Mail from '../../public/ui_Kit/Mail.svg';
 import { useRouter } from 'next/router';
-
+import { BG_NONE } from '../styleProps';
 /**
  * Футтер содержит 2 зоны.
  * 1 зона содержит 4 блока в первом блоке логотип + приемущественный текст + компонет social_kit,
@@ -18,7 +18,7 @@ import { useRouter } from 'next/router';
  * @returns Footer
  */
 const Footer = () => {
-    let bg_none = {"padding": "15px", "background": "none", "border": "none", "marginBottom":"0"} //временный костыль из-за несогласованности работы стилей boothstrap компонента
+    let bg_none = BG_NONE
     let AlternativeLogo = `"Логотип: надпись - Армада, ниже конно-спортивный клуб."`;
     let date = new Date();
     let year = date.getFullYear();

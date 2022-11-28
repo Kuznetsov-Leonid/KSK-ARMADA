@@ -1,0 +1,47 @@
+.ShortAboutUs{
+    background-color:  #D6D1D4;
+    font-family: 'Roboto';
+    font-style: normal;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    .ShortAboutUs_img{
+        display: block;
+    }
+    h4{
+        margin-bottom: 60px;
+        font-size: 32px;
+        line-height: 38px;
+    }
+}
+
+.ShortAboutUs_Benefits_item{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    .ShortAboutUs_Benefits_item_img{
+        height: auto;
+        margin-bottom: 23px;
+    }
+}
+.ShortAboutUs_on{
+    display: none;
+}
+@media (max-width: 1200px){
+    .ShortAboutUs{
+        h4{
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 70px;
+            font-size: 32px;
+        }
+        .ShortAboutUs_on{
+            display:block;
+        }
+        .ShortAboutUs_off{
+            display: none;
+        }
+    }
+}

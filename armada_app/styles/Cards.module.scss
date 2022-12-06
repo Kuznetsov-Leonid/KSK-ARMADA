@@ -1,0 +1,118 @@
+.Imges{
+    border-radius: 20px;
+}
+.DATERELISE{
+    margin-top: 3px;
+    margin-bottom: 10px;
+    span{
+        position: relative;
+        top: 2px;
+        left: 3px;
+        opacity: 0.6;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        color: black;
+    }
+}
+.TITLE{
+    min-height: 70px;
+    max-height: 70px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    color: #1E212C;
+}
+.SHORTS{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    min-height: 80px;
+    max-height: 80px;
+}
+
+@media (max-width: 1400px){
+    .ImgesCard{
+        width: 300px;
+        height: auto;
+    }
+}
+
+@media (max-width: 1200px){
+    .ImgesCard{
+        width: 300px;
+        height: auto;
+    }
+    .SHORTS{
+        min-height: 150px;
+        max-height: 350px;
+    }
+}
+
+@media (max-width: 992px){
+    .ImgesCard{
+        width: 200px;
+        height: auto;
+    }
+    .SHORTS{
+        min-height: 170px;
+        max-height: 350px;
+    }
+    .TITLE{
+        min-height: 90px;
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 768px){
+    .ImgesCard{
+        width: 150px;
+        height: auto;
+    }
+    .SHORTS{
+        min-height: 250px;
+        max-height: 350px;
+    }
+    .TITLE{
+        min-height: 130px;
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 576px){
+    .CardsItem{
+        text-align: center;
+    }
+    .ImgesCard{
+        width: 380px;
+        height: auto;
+    }
+    .SHORTS{
+        min-height: auto;
+        max-height: 150px;
+    }
+    .TITLE{
+        min-height: auto;
+        max-height: 150px;
+    }
+}
+
+@media (max-width: 430px){
+    .CardsItem{
+        text-align: center;
+    }
+    .ImgesCard{
+        width: 300px;
+        height: auto;
+    }
+}
+
+@media (max-width: 350px){
+    .CardsItem{
+        text-align: center;
+    }
+    .ImgesCard{
+        width: auto;
+        height: auto;
+    }
+}

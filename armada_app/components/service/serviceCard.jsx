@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Styles from '../../styles/ServiceCard.module.scss';
-import { Container, CardGroup, Card, Modal, Button } from 'react-bootstrap';
+import { Container, CardGroup, Card, Button } from 'react-bootstrap';
 import Image from 'next/image';
 import { RegularButtonSolid } from '../buttons/buttons_solid';
 import ServiceModal from '../modal/serviceModal';

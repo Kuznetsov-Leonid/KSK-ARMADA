@@ -29,6 +29,7 @@
     font-weight: 400;
     min-height: 80px;
     max-height: 80px;
+    text-align: justify;
 }
 
 @media (max-width: 1400px){
@@ -112,6 +113,7 @@
         text-align: center;
     }
     .ImgesCard{
+        max-width: 200px;
         width: auto;
         height: auto;
     }

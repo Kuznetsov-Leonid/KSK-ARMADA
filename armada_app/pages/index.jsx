@@ -2,6 +2,7 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
 import Invite from '../components/regular/invite';
 import ShortAboutUs from '../components/regular/shortAboutUs';
+import Group1 from '../components/home/group1';
 import Group2 from '../components/home/group2';
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
       <div className={styles.container}>  
       <main className={styles.main}>
+        <Group1/>
         <Invite/>
         <Group2/> 
         <ShortAboutUs/>

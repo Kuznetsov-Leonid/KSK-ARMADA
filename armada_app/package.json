@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
+    "animate.css-react": "^1.1.0",
     "bootstrap": "^5.2.3",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.4",
@@ -17,6 +19,11 @@
     "react-bootstrap": "^2.6.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.39.5",
-    "sass": "^1.56.1"
+    "react-reveal": "^1.2.2",
+    "sass": "^1.56.1",
+    "wowjs": "^1.1.3"
+  },
+  "devDependencies": {
+    "intersection-observer": "^0.12.2"
   }
 }

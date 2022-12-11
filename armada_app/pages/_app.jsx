@@ -1,6 +1,7 @@
 import Layout from '../components/Layout/layout';
 import '../styles/globals.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'animate.css';
 import Head from 'next/head';
 
 

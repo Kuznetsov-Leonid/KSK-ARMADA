@@ -4,6 +4,7 @@ import { Container, CardGroup, Card, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
 import { BG_NONE } from '../styleProps';
 import ImgShortAboutUs from '../../public/imgComponents/imgShortAboutUs.png';
+import { AnimBottom } from '../animation/WueScroll';
 //-------------------------------------------------------
 import Check from '../../public/ui_Kit/check.svg';
 import Hanger from '../../public/ui_Kit/hanger.svg';
@@ -51,7 +52,11 @@ const ShortAboutUs = () => {
         });
         return (
             <>
-                <Row lg={2} style={{'justify-content': 'center'}}>{ITEMS}</Row>
+                <Row lg={2} style={{'justify-content': 'center'}}>
+                    <AnimBottom>
+                        {ITEMS}
+                    </AnimBottom>
+                </Row>
             </>
         );
     }
@@ -61,28 +66,34 @@ const ShortAboutUs = () => {
         <>
             <div className={Styles.ShortAboutUs}>
                 <Container>
-                    <TitleComponent>Коротко о нас</TitleComponent>
-                    <Card style={BG_NONE} className={Styles.ShortAboutUs_on}>
-                            <div className={Styles.ShortAboutUs_img}>
-                                <Image 
-                                    style = {{'width':'100%', 'height':'auto'}} 
-                                    src   = {ImgShortAboutUs} 
-                                    alt   = 'Фотография: лошадь привязанная за недауздок, стоит в помещении конюшни.'
-                                />
-                            </div>
+                        <TitleComponent>Коротко о нас</TitleComponent>
+                        <Card style={BG_NONE} className={Styles.ShortAboutUs_on}>
+                            <AnimBottom>
+                                <div className={Styles.ShortAboutUs_img}>
+                                    <Image 
+                                        style = {{'width':'100%', 'height':'auto'}} 
+                                        src   = {ImgShortAboutUs} 
+                                        alt   = 'Фотография: лошадь привязанная за недауздок, стоит в помещении конюшни.'
+                                    />
+                                </div>
+                            </AnimBottom>
                         </Card>
                     <CardGroup>
                         <Card style={BG_NONE} className={Styles.ShortAboutUs_off}>
-                            <div className={Styles.ShortAboutUs_img}>
-                                <Image 
-                                    style = {{'width':'100%', 'height':'auto'}} 
-                                    src   = {ImgShortAboutUs} 
-                                    alt   = 'Фотография: лошадь привязанная за недауздок, стоит в помещении конюшни.'
-                                />
-                            </div>
+                            <AnimBottom>
+                                <div className={Styles.ShortAboutUs_img}>
+                                    <Image 
+                                        style = {{'width':'100%', 'height':'auto'}} 
+                                        src   = {ImgShortAboutUs} 
+                                        alt   = 'Фотография: лошадь привязанная за недауздок, стоит в помещении конюшни.'
+                                    />
+                                </div>
+                            </AnimBottom>
                         </Card>
                         <Card style={BG_NONE}>
-                            <h4>Создавать комфорт для вас и лошадей наша работа </h4>
+                            <AnimBottom>
+                                <h4>Создавать комфорт для вас и лошадей наша работа </h4>
+                            </AnimBottom>
                             <BenefitsList DATA = {ShortAboutUsAPI}/>
                         </Card>
                     </CardGroup>

@@ -3,6 +3,7 @@ import { Container, CardGroup, Card } from 'react-bootstrap';
 import Styles from '../../styles/HomeGroup2.module.scss';
 import Cards from '../regular/Cards';
 import { EventGroupAPI } from '../../pages/api/EventGroupAPI';
+import { AnimLeft } from '../animation/WueScroll';
 
 const Group2 = () => {
 
@@ -35,7 +36,9 @@ const Group2 = () => {
         });
         return(
             <>
+            <AnimLeft>
                 {ITEMS}
+            </AnimLeft>
             </>
         );
     };

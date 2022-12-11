@@ -1,9 +1,12 @@
+import { AnimBottom } from "./animation/WueScroll";
 const TitleComponent = ({children}) => {
     return(
         <>
-        <div className="TitleComponent">
-            <h1>{children}</h1>
-        </div>
+            <AnimBottom>
+                <div className="TitleComponent">
+                    <h1>{children}</h1>
+                </div>
+            </AnimBottom>
         </>
     );
 }

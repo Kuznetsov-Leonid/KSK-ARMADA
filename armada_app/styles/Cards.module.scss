@@ -1,3 +1,9 @@
+@mixin fonts{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+}
+
 .Imges{
     border-radius: 20px;
 }
@@ -9,9 +15,7 @@
         top: 2px;
         left: 3px;
         opacity: 0.6;
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
+        @include fonts();
         color: black;
     }
 }
@@ -24,9 +28,7 @@
     color: #1E212C;
 }
 .SHORTS{
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
+    @include fonts();
     min-height: 80px;
     max-height: 80px;
     text-align: justify;

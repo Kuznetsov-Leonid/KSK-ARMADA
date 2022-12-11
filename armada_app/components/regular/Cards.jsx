@@ -5,6 +5,7 @@ import { SmallButtonSolid } from '../buttons/buttons_solid';
 import Styles from '../../styles/Cards.module.scss';
 import { BG_NONE } from '../styleProps';
 import CardsModal from '../modal/cardsModal';
+import { AnimBottom } from '../animation/WueScroll';
 //---------------------------------------
 import Calendar from '../../public/ui_Kit/Calendar.svg';
 //---------------------------------------
@@ -36,6 +37,7 @@ const Cards = (props) => {
                         />
                         <span>{DATERELISE.relise}</span>
                     </div>
+                    <AnimBottom>
                     <div className = {Styles.TITLE}>
                         <h5>{TITLE.title}</h5>
                     </div>
@@ -48,6 +50,7 @@ const Cards = (props) => {
                             title   = "Подробнее"
                         />
                     </div>
+                    </AnimBottom>
                 </Card>
                 <CardsModal
                     show   = {modalShow}

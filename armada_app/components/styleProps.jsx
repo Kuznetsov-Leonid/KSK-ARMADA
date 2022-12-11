@@ -1,1 +1,1 @@
-export const BG_NONE = {"padding": "15px", "background": "none", "border": "none", "marginBottom":"0"} //временный костыль из-за несогласованности работы стилей boothstrap компонента
+export const BG_NONE = {"padding": "15px", "background": "none", "border": "none", "marginBottom":"0", "pading":"0"} //временный костыль из-за несогласованности работы стилей boothstrap компонента

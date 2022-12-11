@@ -3,7 +3,7 @@ const TitlePage = ({children}) => {
     return(
         <>
         <AnimBottom>
-            <div className="TitlePage">
+            <div className={"TitlePage"}>
                 <h1>{children}</h1>
             </div>
         </AnimBottom>

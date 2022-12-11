@@ -1,9 +1,12 @@
 import styles from '../styles/Home.module.scss';
+import ContactGroup1 from '../components/contacts/ContactGroup1';
+import ContactMap from '../components/contacts/ContactMap';
 const Contacts = () => {
     return(
         <>
             <main className={styles.main}>
-                <h1>Контакты</h1>
+                <ContactGroup1/>
+                <ContactMap/>
             </main>
         </>
     );

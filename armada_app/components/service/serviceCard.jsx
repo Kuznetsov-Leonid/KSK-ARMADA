@@ -4,6 +4,7 @@ import { Container, CardGroup, Card, Button } from 'react-bootstrap';
 import Image from 'next/image';
 import { RegularButtonSolid } from '../buttons/buttons_solid';
 import ServiceModal from '../modal/serviceModal';
+import { AnimBottom } from "../animation/WueScroll";
 
 /**
  * Компонент лист услуг
@@ -145,7 +146,9 @@ export const ServiceCard = (props) => {
         return(
             <>
                 <div>
-                    {ITEMS} 
+                    <AnimBottom>
+                        {ITEMS} 
+                    </AnimBottom>
                 </div>
             </>
         );

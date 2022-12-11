@@ -1,9 +1,10 @@
 import styles from '../styles/Home.module.scss';
+import BlogComponent from '../components/blog/blogComponent';
 const Blog = () => {
     return(
         <>
             <main className={styles.main}>
-                <h1>Блог</h1>
+                <BlogComponent/>
             </main>
         </>
     );

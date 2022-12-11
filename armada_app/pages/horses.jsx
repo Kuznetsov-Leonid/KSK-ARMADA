@@ -1,9 +1,10 @@
 import styles from '../styles/Home.module.scss';
+import HorsesComponent from '../components/horses/horsesComponent';
 const Horses = () => {
     return(
         <>
             <main className={styles.main}>
-                <h1>Лошади</h1>
+                <HorsesComponent/>
             </main>
         </>
     );

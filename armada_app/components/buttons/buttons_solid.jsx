@@ -72,3 +72,22 @@ export const SmallButtonSolid = (props) => {
         </>
     )
 };
+
+export const RegularButtonSolidForm = (props) => {
+    return(
+        <>
+            <button 
+                {...props}
+                href      = {props.href}
+                onClick   = {props.onClick}
+                disabled  = {props.disabled}
+                type      = {props.type}
+                value     = {props.value}
+                id        = {props.id}
+                className = {`${Styles.RegularButtonSolidForm} ${Styles.Bg_none}`}
+            >
+                {props.title}
+            </button>
+        </>
+    )
+};

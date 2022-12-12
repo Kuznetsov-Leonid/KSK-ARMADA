@@ -6,7 +6,8 @@ import Image from 'next/image';
 import Mail from '../../public/contacts/Mail.svg';
 import iPhone from '../../public/contacts/iPhone.svg';
 import Vector from '../../public/contacts/Vector.svg';
-import { AnimLeft } from "../animation/WueScroll";
+import { AnimLeft, AnimRight } from "../animation/WueScroll";
+import Forms from "../regular/form";
 
 const ContactGroup1 = () => {
     return(
@@ -16,6 +17,7 @@ const ContactGroup1 = () => {
                     <TitlePage>Контакты</TitlePage>
                     <CardGroup>
                         <Card style = {BG_NONE}>
+                            <br />
                             <AnimLeft>
                                 <div className={Styles.ItemConact}>
                                     <Image className={Styles.Mail} src={Mail} alt='Электронная почта'/>
@@ -32,7 +34,15 @@ const ContactGroup1 = () => {
                             </AnimLeft>
                         </Card>
                         <Card style = {BG_NONE}>
-                            
+                            <AnimRight>
+                                <Container>
+                                    <br />
+                                    <h2>Остались вопросы?</h2>
+                                    <h6>Оставте сообщение и мы обязательно на них ответим <b>;)</b></h6>
+                                    <br />
+                                </Container>
+                                <Forms/>
+                            </AnimRight>
                         </Card>
                     </CardGroup>
                 </Container>

@@ -149,7 +149,18 @@
     border: 2px solid #469597;
     border-radius: 4px;
 }
-
+.RegularButtonSolidForm{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 5px 32px 7px 32px;
+    margin: 5px;
+    color: #ffffff;
+    background-color: #469597;
+    border: 2px solid #469597;
+    border-radius: 4px;
+}
 /*---Buttons settings solid hover---*/
 
 .LargeButtonSolid:hover{
@@ -161,6 +172,10 @@
     border: 2px solid #4BCCCF;
 }
 .SmallButtonSolid:hover{
+    background-color: #4BCCCF;
+    border: 2px solid #4BCCCF;
+}
+.RegularButtonSolidForm:hover{
     background-color: #4BCCCF;
     border: 2px solid #4BCCCF;
 }
@@ -179,7 +194,10 @@
     background-color: #5BA199;
     border: 2px solid #5BA199;
 }
-
+.RegularButtonSolidForm:focus{
+    background-color: #5BA199;
+    border: 2px solid #5BA199;
+}
 /*---Buttons settings solid active---*/
 
 .LargeButtonSolid:active{
@@ -194,7 +212,10 @@
     background-color: #5BA199;
     border: 2px solid #5BA199;
 }
-
+.RegularButtonSolidForm:active{
+    background-color: #5BA199;
+    border: 2px solid #5BA199;
+}
 /*---Buttons settings solid disabled---*/
 
 .LargeButtonSolid:disabled{
@@ -211,4 +232,7 @@
     background: #469597;
     opacity: 0.5;
     border-radius: 4px;
+}
+.RegularButtonSolidForm:disabled{
+    display: none;
 }

@@ -35,10 +35,11 @@ const ContactGroup1 = () => {
                         </Card>
                         <Card style = {BG_NONE}>
                             <AnimRight>
-                                <Container>
+                                <Container style={{'text-shadow': '0px 4px 4px rgba(0, 0, 0, 0.25)'}}>
                                     <br />
                                     <h2>Остались вопросы?</h2>
                                     <h6>Оставте сообщение и мы обязательно на них ответим <b>;)</b></h6>
+                                    <hr />
                                     <br />
                                 </Container>
                                 <Forms/>

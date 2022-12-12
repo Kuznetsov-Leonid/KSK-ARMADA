@@ -1,11 +1,101 @@
 import React, { useRef, useState } from 'react';
 import Styles from '../../styles/Form.module.scss';
-import { Container, Form } from 'react-bootstrap';
+import { Container, Form, Modal, Button, Spinner } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import { RegularButtonSolidForm } from "../buttons/buttons_solid";
+import { FormAPI } from '../../pages/api/FormAPI';
 
-const Forms = (props) => {
+const Forms = () => {
+    const [modalShowSuccess, setModalShowSuccess] = useState(false);
+    const [modalShowError, setModalShowError] = useState(false);
+    const [modalShowLoad, setModalShowLoad] = useState(false);
+
+    /**
+     * Модальное окно: Сообщение об успешной отправки сообщения.
+     * @param {*} props 
+     * @returns 
+     */
+    const ModalSucces = (props) =>{
+        const onHide = props.onHide;
+        return(
+            <>
+                <Modal
+                    {...props}
+                    size            = 'lg'
+                    aria-labelledby = 'contained-modal-title-vcenter'
+                    centered
+                >
+                    <Modal.Header closeButton>
+                    <Modal.Title id="contained-modal-title-vcenter">
+                    </Modal.Title>
+                    </Modal.Header>
+                        <Container>
+                            <h4>Мы получили сообщение и скоро с Вами свяжемся!)))</h4>
+                        </Container>
+                    <Modal.Footer>
+                        <Button onClick = {onHide}>Отлично</Button>
+                    </Modal.Footer>
+                </Modal>
+            </>
+        );
+    }
+    /**
+     * Модальное окно: Сообщение об отказе.
+     * @param {*} props 
+     * @returns 
+     */
+    const ModalErrror = (props) =>{
+        const onHide = props.onHide;
+        return(
+            <>
+                <Modal
+                    {...props}
+                    size            = 'lg'
+                    aria-labelledby = 'contained-modal-title-vcenter'
+                    centered
+                >
+                    <Modal.Header closeButton>
+                    <Modal.Title id="contained-modal-title-vcenter">
+                        Что-то пошло не так(
+                    </Modal.Title>
+                    </Modal.Header>
+                        <Container>
+                            <h3>Вы можете связаться с нами по телефону)</h3>
+                            <h1>+7(967)017-99-63</h1>
+                        </Container>
+                    <Modal.Footer>
+                        <Button onClick = {onHide}>Закрыть</Button>
+                    </Modal.Footer>
+                </Modal>
+            </>
+        );
+    }
+    /**
+     * Модальное окно: отправка сообщения.
+     * @param {*} props 
+     * @returns 
+     */
+    const SendLoad = (props) =>{
+        const onHide = props.onHide;
+        return(
+            <>
+                <Modal
+                    {...props}
+                    aria-labelledby = 'contained-modal-title-vcenter'
+                    centered
+                >
+                    <div className={Styles.SendLoad}>
+                        <h5>Отправляем...</h5>
+                        <br />
+                        <Spinner animation="border" variant="danger" />
+                    </div>
+                </Modal>
+            </>
+        );
+    }
+
+    //Валидация формы
     const form = useRef();
     const {
         register,
@@ -18,14 +108,15 @@ const Forms = (props) => {
     } = useForm({
         mode: "onTouched"
     }); 
-    const sendEmail = (e) => {
-        //  test ---- 'service_td3yqi6', 'template_g27ul53', form.current, 'user_RBIjAEvAriwtz46L0hxec'
-        //  ARMADA ---- 'service_rla1tl2', 'template_04b0tu1', form.current, 'user_W6DyZvFT710FcvSPQiVd2'
-        emailjs.sendForm('service_rla1tl2', 'template_04b0tu1', form.current, 'user_W6DyZvFT710FcvSPQiVd2')
+
+    //Отправка сообщения
+    const sendEmail = () => {
+        emailjs.sendForm(FormAPI.dataSend, FormAPI.selector, form.current, FormAPI.token)
         .then((result) => {
             console.log(result.text);
                 function success() {
-                    alert("Спасибо, мы скоро с Вами свяжемся!");
+                    setModalShowLoad(false);
+                    setModalShowSuccess(true);
                     console.log("Успешное отправление формы.");
                     reset();
                 }
@@ -33,16 +124,15 @@ const Forms = (props) => {
             }, (error) => {
                 console.log(error.text);
                 function notSuccess() {
-                    alert("Что-то пошло не так, ошибка отправки.");
+                    setModalShowLoad(false);
+                    setModalShowError(true);
                     console.log("Ошибка отправки формы.");
                     reset();
                 } 
                     notSuccess();
             });
-        return (e.preventDefault())
     }   
-
-    const onSubmit = (data) => {
+    const onSubmit = () => {
         //alert(JSON.stringify(data));
         sendEmail();
     }
@@ -96,10 +186,11 @@ const Forms = (props) => {
                             <Form.Label>Сообщение</Form.Label>
                             <Form.Control
                                 {...register("message")}
+                                type        = "massege"
                                 as          = "textarea" 
                                 rows        = {3}
                                 placeholder = "Ваше сообщение"
-                                name        = "massege"
+                                name        = "message"
                             />
                         </Form.Group>
                         <Form.Group className = "mb-3" controlId = "formBasicCheckbox" name = "checkbox1">
@@ -124,11 +215,18 @@ const Forms = (props) => {
                             <RegularButtonSolidForm 
                                 disabled  = {!isValid} 
                                 title     = "Отправить"
+                                type      = 'submit' 
+                                value     = 'Send'
+                                id        = 'send'
+                                onClick = {() => setModalShowLoad(true)}
                                 />
                         </div>
                     </Form>
                 </Container>
             </div>
+            <ModalSucces show = {modalShowSuccess} onHide = {() => setModalShowSuccess(false)}/>
+            <ModalErrror show = {modalShowError} onHide = {() => setModalShowError(false)}/>
+            <SendLoad show = {modalShowLoad} onHide = {() => setModalShowLoad(false)}/>
         </>
     );
 }

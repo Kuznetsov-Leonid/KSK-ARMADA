@@ -5,7 +5,7 @@ import ShortAboutUs from '../components/regular/shortAboutUs';
 import Group1 from '../components/home/group1';
 import Group2 from '../components/home/group2';
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Head>
@@ -23,3 +23,4 @@ export default function Home() {
     </>
   )
 }
+export default Home;

@@ -7,6 +7,7 @@ import Phone from '../../public/ui_Kit/iPhone.svg';
 import Mail from '../../public/ui_Kit/Mail.svg';
 import { useRouter } from 'next/router';
 import { BG_NONE } from '../styleProps';
+import Link from 'next/link';
 /**
  * Футтер содержит 2 зоны.
  * 1 зона содержит 4 блока в первом блоке логотип + приемущественный текст + компонет social_kit,
@@ -55,12 +56,12 @@ const Footer = () => {
                             >
                                 <h1>Карта сайта</h1>
                                 <div className={`${Styles.MapSite}`}>
-                                    <a href="http://">Главная</a>
-                                    <a href="http://">Услуги</a>
-                                    <a href="http://">Лошади</a>
-                                    <a href="http://">Блог</a>
-                                    <a href="http://">Контакты</a>
-                                    <a href="http://">Постой</a>
+                                    <Link href="/">Главная</Link>
+                                    <Link href="/service">Услуги</Link>
+                                    <Link href="/horses">Лошади</Link>
+                                    <Link href="/blog">Блог</Link>
+                                    <Link href="/contacts">Контакты</Link>
+                                    <Link href="/rent">Постой</Link>
                                 </div>
                             </Card>
                             <Card 
@@ -72,11 +73,11 @@ const Footer = () => {
                                     ${Styles.MapService} 
                                     ${Styles.MapSite}`
                                     }>
-                                    <a href="http://">Конный прокат</a>
-                                    <a href="http://">Обучение верховой езде</a>
-                                    <a href="http://">Фотосессии</a>
-                                    <a href="http://">Экскурсии</a>
-                                    <a href="http://">Аренда денников</a>
+                                    <Link href="/service">Конный прокат</Link>
+                                    <Link href="/service">Обучение верховой езде</Link>
+                                    <Link href="/service">Фотосессии</Link>
+                                    <Link href="/service">Экскурсии</Link>
+                                    <Link href="/service">Аренда денников</Link>
                                 </div>
                             </Card>
                             <Card 
@@ -91,6 +92,13 @@ const Footer = () => {
                                     <div style={{'display':'flex'}}>
                                         <Image src={Mail}/>
                                         <p>ksk_armada@yahoo.com</p>
+                                    </div>
+                                    <div className={`
+                                        ${Styles.MapService} 
+                                        ${Styles.MapSite}`
+                                        }>
+                                            <br />
+                                        <Link href={'/documents/doc'}>Документация</Link>
                                     </div>
                                 </div>
                             </Card>

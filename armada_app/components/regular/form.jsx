@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import { RegularButtonSolidForm } from "../buttons/buttons_solid";
 import { FormAPI } from '../../pages/api/FormAPI';
+import Link from 'next/link';
 
 const Forms = () => {
     const [modalShowSuccess, setModalShowSuccess] = useState(false);
@@ -26,13 +27,9 @@ const Forms = () => {
                     aria-labelledby = 'contained-modal-title-vcenter'
                     centered
                 >
-                    <Modal.Header closeButton>
-                    <Modal.Title id="contained-modal-title-vcenter">
-                    </Modal.Title>
-                    </Modal.Header>
-                        <Container>
-                            <h4>Мы получили сообщение и скоро с Вами свяжемся!)))</h4>
-                        </Container>
+                    <Container>
+                        <h4>Мы получили сообщение и скоро с Вами свяжемся!)))</h4>
+                    </Container>
                     <Modal.Footer>
                         <Button onClick = {onHide}>Отлично</Button>
                     </Modal.Footer>
@@ -61,8 +58,9 @@ const Forms = () => {
                     </Modal.Title>
                     </Modal.Header>
                         <Container>
-                            <h3>Вы можете связаться с нами по телефону)</h3>
-                            <h1>+7(967)017-99-63</h1>
+                            <h3>Вы можете связаться с нами по телефону или написать нам на почту и мы обязательно с Вами свяжемся!</h3>
+                            <h4>+7(967)017-99-63</h4>
+                            <h4>ksk_armada@yahoo.com</h4>
                         </Container>
                     <Modal.Footer>
                         <Button onClick = {onHide}>Закрыть</Button>
@@ -202,7 +200,7 @@ const Forms = () => {
                                 type = "checkbox" 
                                 name = "checkbox1"
                             />
-                            <span>&nbsp; Согласие на <a href="#">обработку&nbsp;персональных данных*</a></span>
+                            <span>&nbsp; Согласие на <Link target={'_blank'} href="/documents/priviciInfo">обработку&nbsp;персональных данных*</Link></span>
                         </div>
                         </Form.Group>
                         <div className={Styles.Wornig}>

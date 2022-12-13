@@ -31,7 +31,7 @@ const ShortAboutUs = () => {
                     <Col> 
                         <div className={Styles.ShortAboutUs_Benefits_item}>
                             <div className={Styles.ShortAboutUs_Benefits_item_img}>
-                                <Image src={ITEM_IMG.img}/>
+                                <Image src={ITEM_IMG.img} placeholder = 'blurDataURL'/>
                             </div>
                             <p>{ITEM_TXT.txt}</p>
                         </div>
@@ -71,9 +71,10 @@ const ShortAboutUs = () => {
                             <AnimBottom>
                                 <div className={Styles.ShortAboutUs_img}>
                                     <Image 
-                                        style = {{'width':'100%', 'height':'auto'}} 
-                                        src   = {ImgShortAboutUs} 
-                                        alt   = 'Фотография: лошадь привязанная за недауздок, стоит в помещении конюшни.'
+                                        style       = {{'width':'100%', 'height':'auto'}} 
+                                        src         = {ImgShortAboutUs} 
+                                        alt         = 'Фотография: лошадь привязанная за недауздок, стоит в помещении конюшни.'
+                                        placeholder = 'blur'
                                     />
                                 </div>
                             </AnimBottom>
@@ -83,9 +84,10 @@ const ShortAboutUs = () => {
                             <AnimBottom>
                                 <div className={Styles.ShortAboutUs_img}>
                                     <Image 
-                                        style = {{'width':'100%', 'height':'auto'}} 
-                                        src   = {ImgShortAboutUs} 
-                                        alt   = 'Фотография: лошадь привязанная за недауздок, стоит в помещении конюшни.'
+                                        style       = {{'width':'100%', 'height':'auto'}} 
+                                        src         = {ImgShortAboutUs} 
+                                        alt         = 'Фотография: лошадь привязанная за недауздок, стоит в помещении конюшни.'
+                                        placeholder = 'blur'
                                     />
                                 </div>
                             </AnimBottom>

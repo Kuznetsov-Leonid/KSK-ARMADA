@@ -26,9 +26,10 @@ const Cards = (props) => {
                     <Card style = {BG_NONE} className = {Styles.CardsItem}>
                         <div className = {Styles.Imges}>
                             <Image 
-                                className = {Styles.ImgesCard} 
-                                src       = {IMG.img} 
-                                alt       = {ALT.alt}
+                                className   = {Styles.ImgesCard} 
+                                src         = {IMG.img} 
+                                alt         = {ALT.alt}
+                                placeholder = 'blurDataURL'
                             />
                         </div>
                         <div className = {Styles.DATERELISE}>

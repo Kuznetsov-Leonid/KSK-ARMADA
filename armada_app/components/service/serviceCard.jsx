@@ -80,9 +80,10 @@ export const ServiceCard = (props) => {
                                 >
                                     <div className={`${Styles.ImgZone}`}>
                                         <Image
-                                            className = {Styles.IMG}
-                                            src       = {img}
-                                            alt       = {alt}
+                                            className   = {Styles.IMG}
+                                            src         = {img}
+                                            alt         = {alt}
+                                            placeholder = 'blurDataURL'
                                         />
                                     </div>
                                 </Card>

@@ -31,8 +31,30 @@
             font-size: 1.5rem;
         }
     }
+    
 }
 
+.Rent2__gallery{
+    margin-top: 50px;
+    img{
+        width: auto;
+        height: auto;
+        border-radius: 20px;
+        cursor: pointer;
+        margin-top: 40px;
+        transition: 0.3s;
+    }
+    img:hover{
+        box-shadow: 0px 0px 10px 9px rgba(255, 255, 255, 0.4);
+    }
+}
+
+.Img_Layout{
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
 @media (max-width: 992px){
     .Rent1{
         .Rent1_title{

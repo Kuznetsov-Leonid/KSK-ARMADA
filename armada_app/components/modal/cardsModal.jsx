@@ -1,4 +1,5 @@
 import { Modal, Button, Container } from 'react-bootstrap';
+import Styles from '../../styles/Rent.module.scss';
 
 const CardsModal = (props) => {
     const onHide = props.onHide;

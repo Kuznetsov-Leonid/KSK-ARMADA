@@ -59,8 +59,8 @@ const Forms = () => {
                     </Modal.Header>
                         <Container>
                             <h3>Вы можете связаться с нами по телефону или написать нам на почту и мы обязательно с Вами свяжемся!</h3>
-                            <h4>+7(967)017-99-63</h4>
-                            <h4>ksk_armada@yahoo.com</h4>
+                            <h4 style={{'textAlign':'center'}}>+7(967)017-99-63</h4>
+                            <h4 style={{'textAlign':'center'}}>ksk_armada@yahoo.com</h4>
                         </Container>
                     <Modal.Footer>
                         <Button onClick = {onHide}>Закрыть</Button>

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { RegularButtonSolid } from '../buttons/buttons_solid';
 import ServiceModal from '../modal/serviceModal';
 import { AnimBottom } from "../animation/WueScroll";
+import FormModal from '../modal/formModal';
 
 /**
  * Компонент лист услуг
@@ -30,6 +31,7 @@ export const ServiceCard = (props) => {
      * @returns <ServiceCardItem/>
      */
     const ServiceCardItem = (props) => {
+        const [show, setShow]           = useState(false);
         const [modalShow, setModalShow] = useState(false);
         const ITEM_TITLE                = props.ITEM_TITLE;
         const ITEM_DISCRIPTION          = props.ITEM_DISCRIPTION;
@@ -90,8 +92,8 @@ export const ServiceCard = (props) => {
                                 <Card 
                                     className={`
                                         ${Styles.Description} 
-                                        ${Styles.bg_none}`
-                                    }
+                                        ${Styles.bg_none}
+                                        `}
                                 >
                                     <div className={`${Styles.DescriptionZone}`}>
                                         <h1 className={`${Styles.Right}`}>
@@ -106,7 +108,10 @@ export const ServiceCard = (props) => {
                                         </div>
                                     </div>
                                     <div className={`${Styles.DescriptionBtn}`}>
-                                        <RegularButtonSolid title="Онлайн запись"/>
+                                        <RegularButtonSolid 
+                                            onClick = {() => setShow(true)}
+                                            title   = "Онлайн запись"
+                                        />
                                     </div>
                                 </Card>
                             </CardGroup>
@@ -118,6 +123,10 @@ export const ServiceCard = (props) => {
                     onHide = {() => setModalShow(false)}
                     title  = {infoTitle}
                     body   = {infoDiscription}
+                />
+                <FormModal
+                    show   = {show}
+                    onHide = {() => setShow(false)}
                 />
             </>
         );

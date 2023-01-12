@@ -16,6 +16,7 @@ const Social_kit = () => {
             <Button 
                 variant   = 'link'
                 target    = '_blank'
+                rel="noopener"
                 href      = 'https://vk.com/ksk_armada'
                 className = {`${Styles.linkIco}`}
                 >
@@ -28,6 +29,7 @@ const Social_kit = () => {
             <Button 
                 variant   = 'link'
                 target    = '_blank'
+                rel="noopener"
                 href      = 'https://web.telegram.org/k/#1688111826'
                 className = {`${Styles.linkIco}`}
                 >
@@ -40,6 +42,7 @@ const Social_kit = () => {
             <Button 
                 variant   = 'link'
                 target    = '_blank'
+                rel="noopener"
                 href      = 'https://api.whatsapp.com/send/?phone=79670179963&text=Здравствуйте%2C+у+меня+есть+вопрос'
                 className = {`${Styles.linkIco}`}
                 >
@@ -52,6 +55,7 @@ const Social_kit = () => {
             <Button 
                 variant   = 'link'
                 target    = '_blank'
+                rel="noopener"
                 href      = 'https://www.instagram.com/ksk_armada/'
                 className = {`${Styles.linkIco}`}
                 >

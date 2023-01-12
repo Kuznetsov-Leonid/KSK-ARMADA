@@ -20,7 +20,7 @@ const Invite = () => {
                     <Card style={BG_NONE}>
                         <div className={Styles.Invite_txt}>
                             <AnimLeft>
-                                <p>Конно-спортивный клуб "Армада" приглашает на постой лошадей любого пола и возраста!</p>
+                                <p>Конно-спортивный клуб &quot;Армада&quot; приглашает на постой лошадей любого пола и возраста!</p>
                             </AnimLeft>
                         </div>
                     </Card>

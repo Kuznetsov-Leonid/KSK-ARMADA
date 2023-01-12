@@ -1,0 +1,27 @@
+.linkIco{
+    margin: auto;
+    opacity: 60%;
+    transition: 0.2s;
+    padding: 6px;
+}
+.linkIco:hover{
+    opacity: 100%;
+}
+.linkIco:focus{
+    opacity: 100%;
+    background-color: #5BA199;
+    box-shadow: 0 -4px 16px #5BA199;
+}
+.linkIco:active{
+    opacity: 100%;
+    background-color: #5BA199;
+    box-shadow: 0 -4px 16px #2f3640;
+}
+.What{
+    position: relative;
+    bottom: 1px;
+}
+.Inst{
+    position: relative;
+    bottom: 1px;
+}

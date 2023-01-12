@@ -1,0 +1,138 @@
+.Rent1{
+    display: flex;
+    justify-content: center;
+    background: url('../public/rent/rentImg.jpg') no-repeat fixed top, #1C1E22;
+    background-size: cover;
+    mix-blend-mode: normal;
+    text-align: center;
+    align-items: center;
+    align-content: center; 
+    height: 40rem;
+    width: auto;
+    position: realetive;
+    z-index: -2;
+    overflow: auto;   
+    color: #ffffff;
+    .Rent1_title{
+        h1{
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            line-height: 75px;
+            font-size: 3rem;
+        }
+        h2{
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            line-height: 38px;
+            font-size: 1.5rem;
+        }
+    }
+    
+}
+
+.Rent2__gallery{
+    margin-top: 50px;
+    img{
+        width: auto;
+        height: auto;
+        border-radius: 20px;
+        cursor: pointer;
+        margin-top: 40px;
+        transition: 0.3s;
+    }
+    img:hover{
+        box-shadow: 0px 0px 10px 9px rgba(255, 255, 255, 0.4);
+    }
+}
+
+.Img_Layout{
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width: 992px){
+    .Rent1{
+        .Rent1_title{
+            h1{
+                font-size: 1.6rem;
+                font-weight: 900;
+            }
+            h2{
+                font-size: 1rem;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.Rent2{
+    padding-top: 60px;
+    padding-bottom: 143px;
+    background-color: #1C1E22;
+    color: #ffffff;
+    .Rent2_txt{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.9rem;
+        line-height: 42px;
+    }
+    .Rent2_prise{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 75px;
+        border-bottom: solid 1px #ffffff;
+    }
+    .Rent2_dop{
+        padding-top: 76px;
+        .Rent2_dop__txt{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.5rem;
+            p{
+                line-height: 1.5rem;
+            }
+        }
+        .Rent2_dop__img{
+            text-align: right;
+            img{
+                width: 17rem;
+                height: auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px){
+    .Rent2{
+        .Rent2_txt{
+            font-size: 1rem;
+            text-align: justify;
+        }
+        .Rent2_prise{
+            font-size: 1.3rem;
+            text-align: center;
+        }
+        .Rent2_dop{
+            padding-top: 76px;
+            .Rent2_dop__txt{
+                font-size: 1.5rem;
+            }
+            .Rent2_dop__img{
+                text-align: center;
+                img{
+                    width: 17rem;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
